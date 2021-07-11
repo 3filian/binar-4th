@@ -7,7 +7,7 @@ body {
 	#section-1 {
 		width: 100%;
 		height: 100vh;
-		background-image: url(image/main-bg.jpg);
+		background-image: url(../image/main-bg.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -126,7 +126,7 @@ body {
 	#section-2 {
 		width: 100%;
 		height: 100vh;
-		background-image: url(image/the-games-bg-fix.jpg);
+		background-image: url(../image/the-games-bg-fix.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
 		position: relative;
@@ -204,7 +204,7 @@ body {
 	#section-3 {
 		width: 100%;
 		height: 100vh;
-		background-image: url(image/features-fix.jpg);
+		background-image: url(../image/features-fix.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
 		position: relative;
@@ -214,7 +214,7 @@ body {
 	}
 
 	#section-3 .wrapper-black {
-		background-image: url(image/background-3-1.png);
+		background-image: url(../image/background-3-1.png);
 		width: 100%;
 		height: 100%;
 	}
@@ -300,13 +300,13 @@ body {
 	#section-4 {
 		width: 100%;
 		height: auto;
-		background-image: url(image/requirements-fix.png);
+		background-image: url(../image/requirements-fix.png);
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
 
 	#section-4 .wrapper-black {
-		background-image: url(image/background-4-1.png);
+		background-image: url(../image/background-4-1.png);
 		width: 100%;
 		height: 100%;
 		/*background-size: 100% 125%;*/
@@ -376,7 +376,7 @@ body {
 	#section-5 {
 		width: 100%;
 		height: auto;
-		background-image: url(image/top-score-bg.jpg);
+		background-image: url(../image/top-score-bg.jpg);
 		display: flex;
 		align-items: center;
 		position: relative;
@@ -522,7 +522,7 @@ body {
 	#section-6 {
 		width: 100%;
 		height: 90vh;
-		background-image: url(image/bg-section-6.jpg);
+		background-image: url(../image/bg-section-6.jpg);
 		display: flex;
 		justify-content: center;
 		background-position: center;
@@ -645,7 +645,7 @@ body {
 	footer {
 		width: 100%;
 		height: 18vh;
-		background-image: url(image/bg-section-6.jpg);
+		background-image: url(../image/bg-section-6.jpg);
 		display: flex;
 		justify-content: center;
 	}
