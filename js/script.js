@@ -99,7 +99,7 @@ var start = function () {
       // panel
       panel.style.color = "white";
       panel.style.backgroundColor = "#4C9654";
-      // panel.style.fontSize = "30px";
+      panel.style.fontSize = "30px";
       panel.style.transform = "rotate(-28.87deg)";
       panel.style.boxShadow = "0 0 5px 5px rgba(0, 0, 0, 0.3)";
 
