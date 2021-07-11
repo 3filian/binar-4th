@@ -70,6 +70,15 @@ body {
   margin-bottom: 30px;
   box-sizing: border-box;
   padding: 10px;
+  /* hapus ini */
+  background-color: #9c835f;
+  border: none;
+}
+
+.main .container .box-style {
+  background-color: #9c835f;
+  border: none;
+  box-shadow: none;
 }
 
 .main .container .box.scissor {
@@ -100,6 +109,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: 35px;
 }
 
 @media (min-width: 540px) {
@@ -131,6 +141,13 @@ body {
 }
 
 /* Refresh */
+
+.refresh {
+  /* width: 100px; */
+  /* background-color: #f9b23d; */
+  padding: 10px;
+  box-sizing: border-box;
+}
 
 .refresh img {
   width: 80px;
