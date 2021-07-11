@@ -85,10 +85,9 @@ var start = function () {
 
       //   image computer
       boxesComputer.forEach(function (i) {
-        i.style.backgroundColor = "#9c835f";
-        i.style.boxShadow = "none";
-        i.style.borderRadius = "none";
-        i.style.width = "auto";
+        i.style.removeProperty("box-shadow");
+        i.style.removeProperty("background-color");
+        i.style.removeProperty("border-radius");
       });
       var lockedComputer = NaN;
       lockedComputer = document.querySelector("#computer .box-" + computer);
@@ -100,7 +99,7 @@ var start = function () {
       // panel
       panel.style.color = "white";
       panel.style.backgroundColor = "#4C9654";
-      panel.style.fontSize = "30px";
+      // panel.style.fontSize = "30px";
       panel.style.transform = "rotate(-28.87deg)";
       panel.style.boxShadow = "0 0 5px 5px rgba(0, 0, 0, 0.3)";
 
@@ -111,9 +110,9 @@ var start = function () {
       } else {
         panel.innerHTML = draw;
       }
-      playerRock.setAttribute("disabled", false);
-      playerPaper.setAttribute("disabled", false);
-      playerScissor.setAttribute("disabled", false);
+      playerRock.setAttribute("disabled", true);
+      playerPaper.setAttribute("disabled", true);
+      playerScissor.setAttribute("disabled", true);
     });
   });
   // end of engine v-2
@@ -122,27 +121,46 @@ var start = function () {
 start();
 
 refresh.addEventListener("click", function () {
-  window.location.reload();
-  // boxes.forEach(function (i) {
-  //   i.style.backgroundColor = "#9c835f";
-  //   i.style.boxShadow = "none";
-  // });
-  // boxesComputer.forEach(function (i) {
-  //   i.style.backgroundColor = "#9c835f";
-  //   i.style.boxShadow = "none";
-  //   i.style.borderRadius = "none";
-  //   i.style.width = "auto";
-  // });
-  // panel.style.backgroundColor = "#9c835f";
-  // panel.style.boxShadow = "none";
-  // panel.style.backgroundColor = "#9c835f";
-  // panel.style.transform = "rotate(0)";
+  // window.location.reload();
+  // Reset player's boxes
+  boxes.forEach(function (i) {
+    i.style.removeProperty("box-shadow");
+    i.style.removeProperty("background-color");
+  });
+
+  // Reset computer's boxes
+  boxesComputer.forEach(function (i) {
+    i.style.removeProperty("box-shadow");
+    i.style.removeProperty("background-color");
+    i.style.removeProperty("border-radius");
+  });
+
+  // Reset panel's boxes
+  panel.style.removeProperty("box-shadow");
+  panel.style.removeProperty("background-color");
+  panel.style.removeProperty("transform");
   // panel.style.fontSize = "100px";
-  // panel.innerHTML = "VS";
-  // playerRock.removeAttribute("disabled");
-  // playerPaper.removeAttribute("disabled");
-  // playerScissor.removeAttribute("disabled");
-  // start();
+  panel.innerHTML = "VS";
+
+  const media768 = window.matchMedia("(min-width: 768px)");
+  const media540 = window.matchMedia("(min-width: 540px)");
+  function initialPanelResponsiveness() {
+    if (media768.matches) {
+      panel.style.fontSize = "100px";
+    } else if (media540.matches) {
+      panel.style.fontSize = "76px";
+    } else {
+      panel.style.fontSize = "54px";
+    }
+  }
+
+  initialPanelResponsiveness();
+
+  // Block clicks
+  playerRock.removeAttribute("disabled");
+  playerPaper.removeAttribute("disabled");
+  playerScissor.removeAttribute("disabled");
+  start();
 });
 
 /*
