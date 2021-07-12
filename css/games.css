@@ -79,11 +79,11 @@ body {
   background-color: transparent;
 }
 
-.main .container .box-style {
+/* .main .container .box-style {
   background-color: #9c835f;
   border: none;
   box-shadow: none;
-}
+} */
 
 .main .container .box.scissor {
   margin-bottom: 30px;
@@ -95,7 +95,7 @@ body {
 }
 
 .main p {
-  color: black;
+  color: #332c2b;
   font-family: Open Sans, sans-serif;
   font-size: 18px;
   font-weight: bold;
