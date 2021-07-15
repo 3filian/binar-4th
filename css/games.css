@@ -20,14 +20,29 @@ body {
   align-items: center;
 }
 
+.nav .wrapper .back-wrapper {
+  width: 30px;
+  height: 30px;
+  margin-right: 30px;
+}
+
 .nav .wrapper .back {
   width: 20px;
-  margin-right: 50px;
+  margin-top: -3px;
+}
+
+.nav .wrapper .back-wrapper:hover {
+  /* width: 100%; */
+  box-sizing: border-box;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .nav .wrapper .logo {
   width: 30px;
-  margin-right: 50px;
+  margin-right: 30px;
 }
 
 .nav .wrapper span {

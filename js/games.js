@@ -115,6 +115,10 @@ var start = function () {
       // image player
       box(i);
 
+      playerRock.setAttribute("disabled", true);
+      playerPaper.setAttribute("disabled", true);
+      playerScissor.setAttribute("disabled", true);
+
       rolling();
 
       setTimeout(() => {
@@ -132,23 +136,39 @@ var start = function () {
         setTimeout(() => {
           // panel
           panel.style.color = "white";
-          panel.style.backgroundColor = "#4C9654";
+          // panel.style.backgroundColor = "#4C9654";
           panel.style.fontSize = "30px";
           panel.style.transform = "rotate(-28.87deg)";
           panel.style.boxShadow = "0 0 5px 5px rgba(0, 0, 0, 0.3)";
 
           if (generate == playerWin) {
             panel.innerHTML = playerWin;
+            panel.style.backgroundColor = "#4C9654";
           } else if (generate == computerWin) {
             panel.innerHTML = computerWin;
+            panel.style.backgroundColor = "#bd0000";
           } else {
             panel.innerHTML = draw;
+            panel.style.backgroundColor = "#ffae42";
           }
         }, 0);
 
-        playerRock.setAttribute("disabled", true);
-        playerPaper.setAttribute("disabled", true);
-        playerScissor.setAttribute("disabled", true);
+        // setTimeout(() => {
+        //   // panel
+        //   panel.style.color = "white";
+        //   panel.style.backgroundColor = "#4C9654";
+        //   panel.style.fontSize = "30px";
+        //   panel.style.transform = "rotate(-28.87deg)";
+        //   panel.style.boxShadow = "0 0 5px 5px rgba(0, 0, 0, 0.3)";
+
+        //   if (generate == playerWin) {
+        //     panel.innerHTML = playerWin;
+        //   } else if (generate == computerWin) {
+        //     panel.innerHTML = computerWin;
+        //   } else {
+        //     panel.innerHTML = draw;
+        //   }
+        // }, 0);
       }, 1300);
     });
   });
@@ -179,6 +199,7 @@ refresh.addEventListener("click", function () {
   // panel.style.fontSize = "100px";
   panel.innerHTML = "VS";
 
+  // Panel Responsiveness
   const media768 = window.matchMedia("(min-width: 768px)");
   const media540 = window.matchMedia("(min-width: 540px)");
   function initialPanelResponsiveness() {
