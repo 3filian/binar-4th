@@ -102,7 +102,7 @@ var start = function () {
     }, 100);
   }
 
-  // Engine v-2 --> for all player's options
+  // Engine
   boxes.forEach(function (i) {
     i.addEventListener("click", function () {
       const computer = getComputer();
@@ -119,6 +119,7 @@ var start = function () {
       playerPaper.setAttribute("disabled", true);
       playerScissor.setAttribute("disabled", true);
 
+      // Rolling effect
       rolling();
 
       setTimeout(() => {
