@@ -174,7 +174,7 @@ var start = function () {
       }, 1300);
     });
   });
-  // end of engine v-2
+  // end of engine
 };
 
 start();
