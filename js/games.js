@@ -69,6 +69,7 @@ var start = function () {
     element.style.boxShadow = "0 0 5px 5px rgba(0, 0, 0, 0.3)";
   };
 
+  // function to unbox
   const unbox = function (element) {
     element.style.removeProperty("box-shadow");
     element.style.removeProperty("background-color");
